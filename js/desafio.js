@@ -1,8 +1,8 @@
-productos = prompt("Ingrese un producto");
-precio = parseInt(prompt("Ingrese el precio"));
-productos1 = prompt("Ingrese otro producto");
-precio1 = parseInt(prompt("Ingrese el precio"));
-resultado = precio + precio1;
+let productos = prompt("Ingrese un producto");
+let precio = parseInt(prompt("Ingrese el precio"));
+let productos1 = prompt("Ingrese otro producto");
+let precio1 = parseInt(prompt("Ingrese el precio"));
+let resultado = precio + precio1;
 
 alert(`el precio total es ${resultado}`);
 
@@ -15,18 +15,20 @@ for (i = 1; i <= 12; i++) {
   );
 }
 
-function cuotero(cuotas, resultado1) {
-  cuotas = parseInt(prompt("En cuantas cuotas lo queres hacer?"));
-  resultado1 = resultado / cuotas;
+function cuotero() {
+  let cuotas = parseInt(prompt("En cuantas cuotas lo queres hacer?"));
+  let resultado1 = resultado / cuotas;
 
   if (cuotas < 13) {
     alert(`Te quedaria en cuotas ${cuotas} de $${resultado1}`);
   } else {
     alert("solo se puede hacer en 12 cuotas");
-    cuotas1 = parseInt(prompt(`pone de vuelta las cuotas xd`));
-    resultado2 = resultado / cuotas1;
-    alert(`Te quedaria en cuotas ${cuotas1} de $${resultado2}`);
+    let cuotas1 = parseInt(prompt(`pone de vuelta las cuotas xd`));
+    let resultado2 = resultado / cuotas1;
+    alert(`Te quedaria en ${cuotas1} cuotas de $${resultado2}`);
   }
+  let resultadofinal = resultado1 || resultado2;
+  return resultadofinal;
 }
 
-cuotero();
+const resultadofinal = cuotero();
