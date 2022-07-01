@@ -8,7 +8,11 @@ alert(`el precio total es ${resultado}`);
 
 alert(`en la consola podes ver cuanto te queda en cuotas`);
 for (i = 1; i <= 12; i++) {
-  console.log(`${resultado} / ${i} = ${resultado / i} `);
+  console.log(
+    `En ${i} cuotas de $${resultado} tu ${productos} y ${productos1} te quedarian a $${
+      resultado / i
+    } `
+  );
 }
 
 function cuotero(cuotas, resultado1) {
@@ -16,12 +20,12 @@ function cuotero(cuotas, resultado1) {
   resultado1 = resultado / cuotas;
 
   if (cuotas < 13) {
-    alert(`Te quedaria en cuotas ${cuotas} de ${resultado1}`);
+    alert(`Te quedaria en cuotas ${cuotas} de $${resultado1}`);
   } else {
     alert("solo se puede hacer en 12 cuotas");
     cuotas1 = parseInt(prompt(`pone de vuelta las cuotas xd`));
     resultado2 = resultado / cuotas1;
-    alert(`Te quedaria en cuotas ${cuotas1} de ${resultado2}`);
+    alert(`Te quedaria en cuotas ${cuotas1} de $${resultado2}`);
   }
 }
 
